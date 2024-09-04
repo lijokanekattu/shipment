@@ -14,15 +14,15 @@ Route::get('/user', function (Request $request) {
 //Satus End point
 Route::get('/status',[StatusController::class,'index']);
 Route::post('/status',[StatusController::class,'store']);
-Route::post('/status/{id}',[StatusController::class,'update']);
+Route::put('/status/{id}',[StatusController::class,'update']);
 
 //Shipping Lines End point
 Route::get('/shipping-lines',[ShippingLineController::class,'index']);
 Route::post('/shipping-lines',[ShippingLineController::class,'store']);
-Route::post('/shipping-lines/{id}',[ShippingLineController::class,'update']);
+Route::put('/shipping-lines/{id}',[ShippingLineController::class,'update']);
 
 //Shipments Lines End point
 Route::get('/shipment',[ShipmentController::class,'index']);
 Route::post('/shipment',[ShipmentController::class,'store']);
-Route::post('/shipment/{id}',[ShipmentController::class,'update']);
+Route::put('/shipment/{id}',[ShipmentController::class,'update']);
 Route::delete('/shipment/{id}',[ShipmentController::class,'destroy']);
